@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Rock_Paper_scissor game</title>
+    <style>
+        body{
+            background-color: rgb(30, 29, 36);
+            color: white;
+        }
+        .heading-game{
+            background-color: rgb(153, 164, 173);
+            color: rgba(43, 40, 40, 0.815);
+            text-transform: capitalize;
+            padding: 1.2rem 0;
+            text-shadow: 2px 1px 12px;
+        }
+        .gameDiv{
+            padding-top: 2rem;
+            font-size: xx-large;
+            
+           
+        }
+        .score span{
+            margin: 4rem 10px;
+            font-size: xx-large;
+            color: white;
+            /* background-color: antiquewhite; */
+            padding: 3.5px 15px;
+            font-weight: 500;
+            text-transform: capitalize;
+            border-radius: 12px;
+        }
+        .selectbutton button{
+            margin: 3px 5rem;
+            border-width: 0;
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            
+            background-size: 67px;
+            background-repeat: no-repeat;
+            background-position: -2.4px; 
+             
+            
+
+        }
+        #resultid{
+            display: none;
+            /* display:flex; */
+        }
+        .result div, .result span{
+            margin: 3.5rem 5rem;
+           
+           
+        }
+        .result div{
+            border-radius: 50%;
+            width: 6.2rem;
+            height: 6.2rem;
+            background-color: white;
+
+            background-size: 77px;
+            background-repeat: no-repeat;
+            background-position: -2.4px; 
+           
+        }
+        .result span{
+            margin-top: 5.5rem;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #resultText{
+            text-shadow: 2px 1px 12px;
+        }
+
+        @media screen and (max-width:500px){
+            .selectbutton button{
+                margin: 3px 1.8rem;
+                margin-left: 1rem;
+                width: 6rem;
+                height: 6rem;
+                background-size: 75px;
+            }
+            .score span{
+                margin: 3rem -2px;
+                
+            }
+            .result div{
+                margin: 5rem 10px;
+            }
+            .result span{
+                margin: 6rem 13px;
+
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center heading-game">
+            <h1>rock paper scissor Game</h1>
+        </div>
+        <div class="row justify-content-center score">
+            <span style="background-color: rgba(255, 0, 0, 0.445);">you</span>
+            <span id="userscore">0</span>
+            <span>-</span>
+            <span id="computerscore">0</span>
+            <span style="background-color: rgba(255, 0, 0, 0.445);;">comp</span>
+        </div>
+
+        <div class="row justify-content-md-center gameDiv selectbutton">
+            <div > <button class="button" onclick="game(this.value)" value="rock" style="background-image: url('rock.jpg');"></button></div>
+            <div><button class="button" onclick="game(this.value)" value="paper"  style="background-image: url('paper.jpg');"></button></div>
+            <div > <button class="button" onclick="game(this.value)" value="scissor"  style="background-image: url('scissor.png');"></button></div>
+            
+        </div>
+        
+        <div class="row justify-content-center result" id="resultid">
+            <div id="userchoice">  </div>
+            <span id="resultText">you won</span>
+            <div id="comchoice"></div>
+            
+            
+        </div>
+    </div>
+<script src="game.js"></script>
+</body>
+</html>
